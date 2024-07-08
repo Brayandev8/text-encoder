@@ -1,0 +1,181 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100vw;
+    margin: 20px;
+    padding: 20px;
+    background: #F3F5FC;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    height: 100px;
+}
+
+/* Estilos para los contenedores de entrada y salida */
+.input-container,
+.output-container {
+    width: 100%;
+    padding: 10px;
+    height: 90%;
+}
+
+/* Estilos específicos para el contenedor de salida */
+.output-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.output-container img {
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+/* Estilos para las áreas de texto de entrada y salida */
+.input-container textarea,
+.output-container textarea {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.input-container textarea {
+    height: 350px;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: left;
+    color: #0A3871;
+    background-color: #F3F5FC;
+}
+
+.output-container textarea {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    overflow-y: auto;
+    height: auto;
+    flex-grow: 1;
+    background-color: white;
+}
+
+/* Estilos para los botones */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button,
+.output-container button {
+    margin: 0 5px;
+    padding: 20px 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover,
+.output-container button:hover {
+    background-color: #0A3871;
+}
+
+/* Estilos específicos para el botón de copiar en la salida */
+.output-container .copy-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para las advertencias */
+.warning {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.warning span {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #495057;
+}
+
+.warning img {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+/* Estilos para los textos en la salida */
+.output-texts p {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+    color: #343A40;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 100%;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .output-container img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        margin: 5px;
+    }
+}
